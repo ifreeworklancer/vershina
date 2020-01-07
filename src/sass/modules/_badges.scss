@@ -1,0 +1,14 @@
+.custom-badges {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+
+  &-item {
+    padding: 10px;
+    font-size: .75rem;
+    border: 1px solid #5E5F66;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+}

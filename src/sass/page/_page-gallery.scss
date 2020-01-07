@@ -1,0 +1,30 @@
+#page-gallery {
+
+  .row {
+
+    .col-sm-6 {
+      padding: 10px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        padding: 10px 10px 0;
+      }
+
+      &:nth-of-type(2n) {
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+
+  .gallery-item {
+    position: relative;
+    padding-bottom: 56.25%;
+    @extend %img;
+    
+    &--video {
+      cursor: pointer;
+    }
+  }
+}

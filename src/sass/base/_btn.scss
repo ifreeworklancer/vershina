@@ -1,0 +1,45 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-family: $headings-font-family;
+  transition: .5s;
+  z-index: 5;
+
+  &:hover {
+
+    .play-icon {
+      background: $dark;
+
+      &::before {
+        border-color: transparent transparent transparent $primary;
+      }
+    }
+  }
+
+  .play-icon {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background: $primary;
+    margin-left: 12px;
+    border-radius: 50%;
+    transition: .5s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-40%, -50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 3px 0 3px 6px;
+      border-color: transparent transparent transparent $dark;
+      transition: .5s;
+    }
+  }
+}

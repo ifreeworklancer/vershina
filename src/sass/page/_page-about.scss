@@ -1,0 +1,124 @@
+#about-advantages {
+  padding: 50px 15px;
+  background: #fff;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    padding: 50px 40px 120px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+
+    @media (min-width: 1500px) {
+      font-size: $h3-font-size;
+    }
+  }
+}
+
+.about-advantages-item {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 30px;
+  padding-left: 30px;
+  max-width: 340px;
+  border-left: 1px solid $gray-400;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    margin: 0 auto;
+  }
+
+  &__value {
+    font-size: 3rem;
+    font-family: $headings-font-family;
+    margin-right: 20px;
+    color: $primary;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      font-size: 3.5rem;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      font-size: 5rem;
+    }
+  }
+
+  &__title {
+    color: $dark;
+    font-size: .875rem;
+  }
+}
+
+#about-info {
+  padding-bottom: 100px;
+  background: #fff;
+
+  .decor-image {
+    position: absolute;
+    right: -50px;
+    bottom: -90px;
+    max-width: 330px;
+  }
+}
+
+.about-info-item {
+  padding-top: 40px;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding-top: 70px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  &__description {
+
+    ul {
+      @extend %decorList;
+      margin-bottom: 25px;
+    }
+
+    p {
+      color: $secondary;
+    }
+  }
+}
+
+.about-info-image {
+  position: relative;
+  max-width: 100%;
+  z-index: 5;
+}
+
+#about-frame {
+  background: #fff;
+
+  .frame-slider-wrapper {
+    padding: 70px 0;
+    background: url('../images/icons/decor-frame.jpg') 50% 50% /cover no-repeat;
+  }
+
+  .frame-slider {
+    position: relative;
+    overflow: hidden;
+    z-index: 20;
+
+    &-item {
+      position: absolute;
+      width: 50%;
+      padding: 0 10px;
+      background: #0A0909;
+      transition: linear 1.2s;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        width: 25%;
+      }
+
+      &__image {
+        border-radius: 10px;
+        padding-bottom: 242 / 432 * 100%;
+        @extend %img;
+      }
+    }
+  }
+}

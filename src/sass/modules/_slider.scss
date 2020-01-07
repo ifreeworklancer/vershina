@@ -1,0 +1,20 @@
+.slider-arrow {
+  display: flex;
+  justify-content: space-between;
+
+  .slider-arrow-item {
+    cursor: pointer;
+
+    svg {
+      fill: #fff;
+      transition: .5s;
+    }
+
+    &:hover {
+
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+}

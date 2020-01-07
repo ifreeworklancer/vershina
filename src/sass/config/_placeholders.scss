@@ -1,0 +1,33 @@
+%pos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+%img {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+%decorList {
+    li {
+        position: relative;
+        margin-bottom: 25px;
+        padding-left: 40px;
+        font-size: 1.125rem;
+        color: $dark;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            background: url('../images/icons/list-decor-primary.svg') 100% 100% /contain no-repeat;
+        }
+    }
+}

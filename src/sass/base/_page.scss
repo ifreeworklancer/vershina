@@ -1,0 +1,220 @@
+#page-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 90px 15px;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 90px 40px 170px;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    padding: 120px 70px 200px;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, xl)) {
+    padding: 150px 120px 390px;
+  }
+
+  .page-description__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+
+    svg {
+      fill: $primary;
+      margin-right: 20px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .decor-image {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    z-index: -2;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      top: 100px;
+    }
+  }
+}
+
+#page-footer {
+  padding: 50px 0 190px;
+  background: #fff;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 50px 0 135px;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    padding: 50px 0 105px;
+  }
+
+
+  .page-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      flex-direction: row;
+    }
+    
+    li {
+      margin-bottom: 15px;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        margin-bottom: 0;
+      }
+
+      &.this-page {
+
+        a {
+          color: $gray-500;
+
+          &:hover {
+            color: $gray-500;
+          }
+        }
+      }
+
+      a {
+        color: $dark;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }    
+  }
+}
+
+.page-intro {
+  padding-top: 170px;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding-top: 190px;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    height: 100vh;
+    max-height: 1080px;
+    padding-top: 0;
+  }
+
+  &-item {
+    position: relative;
+    z-index: 20;
+  }
+
+  &-footer {
+    padding-top: 30px;
+    border-top: 1px solid $gray-400;
+    font-size: .875rem;
+  }
+
+  &__image {
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 126.800%;
+    background-size: contain;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 90vh;
+      padding-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $gray-400;
+    font-size: 1.25rem;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      font-size: $h3-font-size;
+    }
+  }
+
+  &__description {
+    margin-bottom: 25px;
+    font-size: .875rem;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      font-size: $font-size-base;
+      margin-bottom: 35px;
+    }
+
+    p {
+      margin-bottom: 15px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .contacts-list {
+      padding-top: 35px;
+      display: block;
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        span {
+          padding-right: 15px;
+          color: $primary;
+
+          @media (min-width: map_get($grid-breakpoints, md)) {
+            display: block;
+            width: 50%;
+            text-align: right;
+            margin: 0;
+          }
+        }
+        
+        a {
+          color: #fff;
+
+          @media (min-width: map_get($grid-breakpoints, md)) {
+            display: block;
+            padding-left: 15px;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.page-content {
+  padding: 180px 0 50px;
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    padding: 200px 0 50px;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    padding: 270px 0 50px;
+  }
+}

@@ -1,0 +1,110 @@
+#about {
+  background: #fff;
+  z-index: 5;
+
+  .decor-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
+    max-width: 980px;
+    background: url('../images/icons/about-decor.png') 50% 50% /contain no-repeat;
+    z-index: -2;
+  }
+}
+
+.about-item {
+  padding: 50px 0;
+  color: $dark;
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    padding: 100px 0;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid $primary;
+  }
+
+  &__description {
+    margin-bottom: 30px;
+
+    p {
+      color: $secondary;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      @extend %decorList;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.about-slider {
+  height: 100%;
+
+  .slider-arrow {
+
+    &-item {
+      margin-right: 25px;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        margin-right: 40px;
+      }
+
+      &:last-of-type {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &-item {
+    @extend %img;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100%;
+    z-index: 5;
+
+    &::before{
+      content: '';
+      @extend %pos;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70.15%, rgba(0, 0, 0, 0.7) 92.19%);
+      z-index: -2;
+    }
+
+    &__description {
+      position: absolute;
+      left: 15px;
+      bottom: 70px;
+      color: #fff;
+      font-size: .875rem;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        font-size: $font-size-base;
+        left: 50px;
+        bottom: 110px;
+      }
+    }
+  }
+
+  &-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(#fff, .3);
+    z-index: 10;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      padding: 30px 60px;
+    }
+  }
+}

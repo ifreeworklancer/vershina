@@ -1,0 +1,117 @@
+#awards {
+  padding: 90px 0 180px;
+  background: url('../images/bg/awards-bg.jpg') 0 50% /cover no-repeat;
+  z-index: 5;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    padding: 140px 0 160px;
+  }
+
+  .section-title {
+    color: $dark;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid $primary;
+  }
+
+  .decor-image {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 860px;
+    z-index: -2;
+  }
+}
+
+.awards-item {
+  position: relative;
+  max-width: 245px;
+  margin: 0 auto 40px;
+  padding: 40px 20px;
+  text-align: center;
+  color: $dark;
+  z-index: 5;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    padding: 0 20px 20px;
+  }
+
+  &::before {
+    content: '';
+    @extend %pos;
+    background: #fff;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: .5s;
+    z-index: -2;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      top: -70px;
+      bottom: -70px;
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+
+  &-prev {
+    min-height: 125px;
+    margin-bottom: 15px;
+  }
+
+  &__image {
+    max-width: 90px;
+    transition: .5s;
+  }
+
+  &__description {
+    margin-bottom: 15px;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    font-size: .875rem;
+    color: $secondary;
+    transition: .5s;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      position: absolute;
+      left: 0;
+      bottom: -30px;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(90%);
+    }
+  }
+
+  &:hover {
+    z-index: 10;
+
+    &::before {
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .awards-item__image {
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        transform: scale(1.2);
+      }
+    }
+
+    .awards-item__info {
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}

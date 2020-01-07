@@ -1,0 +1,79 @@
+#page-team {
+  background: #fff;
+  padding: 130px 0 90px;
+}
+
+.team-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  color: $secondary;
+  text-align: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    height: 540px;
+  }
+
+  &__image {
+    @extend %img;
+    padding-bottom: 390 / 340 * 100%;
+    transition: .5s;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      height: 70%;
+      padding-bottom: 0;
+    }
+  }
+
+  &-body {
+    background: #fff;
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      height: 30%;
+      background: $gray-300;
+    }
+  }
+
+  &__title {
+    color: $dark;
+    margin-bottom: 15px;
+  }
+
+  &__position {
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    border-top: 1px solid $gray-400;
+    padding-top: 30px;
+    transition: .5s;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      transform: translateY(100%);
+    }
+  }
+
+  &:hover {
+
+    .team-item__image {
+      height: 30%;
+    }
+
+    .team-item-body {
+      background: #fff;
+      height: 70%;
+    }
+
+    .team-item__description {
+      transform: translateY(0);
+    }
+  }
+}

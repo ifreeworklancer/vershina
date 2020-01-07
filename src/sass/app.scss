@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:700&display=swap&subset=cyrillic,cyrillic-ext');
+
+@import "config/variables";
+@import "config/placeholders";
+
+@import "~bootstrap/scss/bootstrap", "~flickity/dist/flickity.min.css";
+
+@import "base/body";
+@import "base/btn";
+@import "base/layout";
+@import "base/page";
+
+@import "modules/forms";
+@import "modules/modal";
+@import "modules/slider";
+@import "modules/video";
+@import "modules/badges";
+
+@import "layout/header";
+@import "layout/intro";
+@import "layout/video-reviews";
+@import "layout/about";
+@import "layout/filmography";
+@import "layout/awards";
+@import "layout/footer";
+
+@import "page/page-about";
+@import "page/page-filmography";
+@import "page/page-gallery";
+@import "page/page-team";
+@import "page/page-contacts";

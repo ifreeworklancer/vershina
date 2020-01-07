@@ -1,0 +1,49 @@
+body {
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 2.25rem;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+        font-size: $h1-font-size;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+        font-size: $h2-font-size;
+    }
+}
+
+p {
+    line-height: 160%;
+}
+
+a {
+    transition: 0.5s;
+    font-family: $headings-font-family;
+}
+
+ul {
+    margin: 0;
+    @extend .list-unstyled;
+}
+
+figure {
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}

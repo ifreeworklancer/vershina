@@ -1,0 +1,30 @@
+.form-group {
+  margin-bottom: 10px;
+  padding: 5px 10px 8px;
+  border: 1px solid $secondary;
+  border-radius: 5px;
+  transition: .5s;
+
+  label {
+    margin-bottom: 5px;
+    font-size: .75rem;
+    color: #fff;
+    transition: .5s;
+  }
+
+  .form-control {
+    background: transparent;
+    padding: 0;
+    height: auto;
+    font-size: .875rem;
+    color: #fff;
+  }
+
+  &.in-focus {
+    border-color: #fff;
+
+    label {
+      color: $primary;
+    }
+  }
+}
